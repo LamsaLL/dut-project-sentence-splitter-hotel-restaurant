@@ -3,9 +3,6 @@ import spacy
 from nltk import word_tokenize
 import unidecode
 from string import punctuation
-from nltk.corpus import stopwords
-from stop_words import get_stop_words
-import time
 
 class Preprocess:
 	"""Preprocessing class"""

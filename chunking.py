@@ -40,7 +40,7 @@ def get_tree(sentence):
     tagged = tagger.tag(word_tokenize(sentence))
     tree = chunkParser.parse(tagged)
 	
-    tree.draw()
+    # tree.draw()
 	
     return tree
 

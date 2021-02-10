@@ -1,6 +1,3 @@
-from sys import path
-
-#path.append("F://SAVS//Projet Solike//DémonCanFly//solike-project//Answer//Tools")
 from keywords import Keyword
 from preprocessing import Preprocess
 from spacy import load as load_spacy
@@ -59,7 +56,7 @@ def get_pos(t_sent,sent, keywords):
         if word in keywords:
             count += 1
             if count == 1:
-                pos_list.append(0) #si c'est le premier mot clé de la phrase alors on met la position à 0
+                pos_list.append(0) #if it's the first keyword of the sentence then we put position to 0
             else:
                 maj_pos = ind - check_relation(sent,word, ind)
                 pos_list.append(maj_pos)
@@ -95,7 +92,7 @@ def split_sentences(review):
 
 if __name__ == "__main__":
 
-    review = "Qualité des plats utilisés, nourriture bien dressés & délicieux. Une carte des vins très bien garnie temps d'attente raisonnable entre les plats très belle vue sur le gouffre d'Enfer service de qualité"
+    review = "Le service fut très sympa, le serveur nous a ravis mais le prix était un peu trop élevé "
 
     print(review)
     sentences_split = split_sentences(review)
